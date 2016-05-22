@@ -5,7 +5,7 @@
 	<link rel="shortcut icon" href="favicon.ico">
 </head>
 
-<body><center>
+<body onload="setthumbnails();"><center>
 
 	<table style="position:absolute; left:10px; top:10px; background-color:black;">
 		<td>
@@ -25,14 +25,14 @@
 
 	<table style="padding:0px 80px 0px 80px;" id="tablecontents">
 		<tr>
-			<td><img src="Covers/Animal Farm.jpg" class="thumbnail"></td>
-			<td><img src="Covers/Animal Farm.jpg" class="thumbnail"></td>
-			<td><img src="Covers/Animal Farm.jpg" class="thumbnail"></td>
-			<td><img src="Covers/Animal Farm.jpg" class="thumbnail"></td>
-			<td><img src="Covers/Animal Farm.jpg" class="thumbnail"></td>
-			<td><img src="Covers/Animal Farm.jpg" class="thumbnail"></td>
-			<td><img src="Covers/Animal Farm.jpg" class="thumbnail"></td>
-			<td><img src="Covers/Animal Farm.jpg" class="thumbnail"></td>
+			<td id="1"></td>
+			<td id="2"></td>
+			<td id="3"></td>
+			<td id="4"></td>
+			<td id="5"></td>
+			<td id="6"></td>
+			<td id="7"></td>
+			<td id="8"></td>
 		</tr>
 		<tr>
 			<td colspan="8"><center><img src="Covers/Animal Farm.jpg" class="main"></center></td>
@@ -43,6 +43,19 @@
 </html>
 
 <script type="text/javascript">
+
+var a="Animal Farm.jpg";
+
+function setthumbnails(){
+	document.getElementById("1").innerHTML = "<img onmouseover=\"selecthover(1)\" src=\"Covers/"+a+""\" class=\"thumbnail\">";
+	document.getElementById("2").innerHTML = "<img src=\"Covers/Animal Farm.jpg\" class=\"thumbnail\">";
+	document.getElementById("3").innerHTML = "<img src=\"Covers/Animal Farm.jpg\" class=\"thumbnail\">";
+	document.getElementById("4").innerHTML = "<img src=\"Covers/Animal Farm.jpg\" class=\"thumbnail\">";
+	document.getElementById("5").innerHTML = "<img src=\"Covers/Animal Farm.jpg\" class=\"thumbnail\">";
+	document.getElementById("6").innerHTML = "<img src=\"Covers/Animal Farm.jpg\" class=\"thumbnail\">";
+	document.getElementById("7").innerHTML = "<img src=\"Covers/Animal Farm.jpg\" class=\"thumbnail\">";
+	document.getElementById("8").innerHTML = "<img src=\"Covers/Animal Farm.jpg\" class=\"thumbnail\">";
+}
 
 function selecthover(n){
 
