@@ -5,7 +5,7 @@
 	<link rel="shortcut icon" href="favicon.ico">
 </head>
 
-<body onload="setthumbnails()"><center>
+<body><center>
 
 	<table style="position:absolute; left:10px; top:10px; background-color:black;">
 		<td>
@@ -18,24 +18,24 @@
 	<div id="popup1" class="overlay">
 		<div class="popup">
 			<a class="close" style="right: 30px;" href="#">&times;</a>
-			<div style="font-family:Georgia; color:white; text-align:center; text-decoration:underline; font-size:230%">Don&rsquo;t Eat the Last Piece <br>of Chocolate</div>
-			<span style="font-family:Georgia; font-size:170%; color:white; text-align:justify;"><br>Tap or hover over a cover to see it enlarged below.<br></span>
+			<div style="font-family:Georgia; color:white; text-align:center; text-decoration:underline; font-size:230%">If Classic Books Had Clickbait Titles</div>
+			<span style="font-family:Georgia; font-size:170%; color:white; text-align:justify;"><br>Hover over a thumbnail to see it enlarged below.<br></span>
 		</div>
 	</div>
 
 	<table style="padding:0px 80px 0px 80px;" id="tablecontents">
 		<tr>
-			<td id="1"></td>
-			<td id="2"></td>
-			<td id="3"></td>
-			<td id="4"></td>
-			<td id="5"></td>
-			<td id="6"></td>
-			<td id="7"></td>
-			<td id="8"></td>
+			<td id="1"><img onmouseover="selecthover(1)" src="Covers/1.jpg" class="thumbnail"></td>
+			<td id="2"><img onmouseover="selecthover(2)" src="Covers/2.jpg" class="thumbnail"></td>
+			<td id="3"><img onmouseover="selecthover(3)" src="Covers/3.jpg" class="thumbnail"></td>
+			<td id="4"><img onmouseover="selecthover(4)" src="Covers/4.jpg" class="thumbnail"></td>
+			<td id="5"><img onmouseover="selecthover(5)" src="Covers/5.jpg" class="thumbnail"></td>
+			<td id="6"><img onmouseover="selecthover(6)" src="Covers/6.jpg" class="thumbnail"></td>
+			<td id="7"><img onmouseover="selecthover(7)" src="Covers/7.jpg" class="thumbnail"></td>
+			<td id="8"><img onmouseover="selecthover(8)" src="Covers/8.jpg" class="thumbnail"></td>
 		</tr>
 		<tr>
-			<td colspan="8"><center><img src="Covers/Animal Farm.jpg" class="main"></center></td>
+			<td colspan="8"><center><span id="bigcover"><img src="Covers/2.jpg" class="main"></span></center></td>
 		</tr>
 	</table>
 
@@ -44,21 +44,8 @@
 
 <script type="text/javascript">
 
-var a="Animal Farm.jpg";
-
-function setthumbnails(){
-	document.getElementById("1").innerHTML = "<img onmouseover=\"selecthover(1)\" src=\"Covers/"+a+"\" class=\"thumbnail\">";
-	document.getElementById("2").innerHTML = "<img src=\"Covers/Animal Farm.jpg\" class=\"thumbnail\">";
-	document.getElementById("3").innerHTML = "<img src=\"Covers/Animal Farm.jpg\" class=\"thumbnail\">";
-	document.getElementById("4").innerHTML = "<img src=\"Covers/Animal Farm.jpg\" class=\"thumbnail\">";
-	document.getElementById("5").innerHTML = "<img src=\"Covers/Animal Farm.jpg\" class=\"thumbnail\">";
-	document.getElementById("6").innerHTML = "<img src=\"Covers/Animal Farm.jpg\" class=\"thumbnail\">";
-	document.getElementById("7").innerHTML = "<img src=\"Covers/Animal Farm.jpg\" class=\"thumbnail\">";
-	document.getElementById("8").innerHTML = "<img src=\"Covers/Animal Farm.jpg\" class=\"thumbnail\">";
-}
-
 function selecthover(n){
-
+	document.getElementById("bigcover").innerHTML = "<img src=\"Covers/"+n+".jpg\" class=\"main\">";
 }
 
 </script>
